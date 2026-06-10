@@ -46,12 +46,12 @@ function clearMatches() {
   document.querySelectorAll('.item.active').forEach(el => el.classList.remove('active'));
 }
 
-function findMatchingCpus(gpu) {
-  return cpus.filter(c => inRange(c.score, gpu.cpuRange));
-}
-
 function findMatchingGpus(cpu) {
   return gpus.filter(g => inRange(g.score, cpu.gpuRange));
+}
+
+function findMatchingCpus(gpu) {
+  return cpus.filter(c => inRange(gpu.score, c.gpuRange));
 }
 
 function handleSelect(id, side) {
@@ -63,23 +63,17 @@ function handleSelect(id, side) {
   if (!selectedEl) return;
   selectedEl.classList.add('active');
 
-  if (side === 'cpu') {
-    const cpu = cpus.find(c => c.id === id);
-    if (!cpu) return;
-    const matches = findMatchingGpus(cpu);
-    matches.forEach(m => {
-      const el = document.querySelector(`.item[data-side="gpu"][data-id="${m.id}"]`);
-      if (el) el.classList.add('match');
-    });
-  } else {
-    const gpu = gpus.find(g => g.id === id);
-    if (!gpu) return;
-    const matches = findMatchingCpus(gpu);
-    matches.forEach(m => {
-      const el = document.querySelector(`.item[data-side="cpu"][data-id="${m.id}"]`);
-      if (el) el.classList.add('match');
-    });
-  }
+  const matches = side === 'cpu'
+    ? findMatchingGpus(cpus.find(c => c.id === id))
+    : findMatchingCpus(gpus.find(g => g.id === id));
+
+  if (!matches) return;
+
+  const targetSide = side === 'cpu' ? 'gpu' : 'cpu';
+  matches.forEach(m => {
+    const el = document.querySelector(`.item[data-side="${targetSide}"][data-id="${m.id}"]`);
+    if (el) el.classList.add('match');
+  });
 }
 
 async function init() {
