@@ -83,6 +83,22 @@ html, body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  max-height: 75vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.track::-webkit-scrollbar {
+  width: 8px;
+}
+
+.track::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.track::-webkit-scrollbar-thumb:hover {
+  background: #c4cad6;
 }
 
 .item {
