@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CPU ↔ GPU Compatibility</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Совместимость процессоров и видеокарт</h1>
+    <p class="subtitle">Бенчмарки PassMark (CPU Mark / GPU Mark). Два списка отсортированы по убыванию мощности.</p>
+  </header>
+
+  <main class="board" id="board">
+    <section class="column" data-side="cpu">
+      <h2 class="column-title">Процессоры</h2>
+      <ol class="track" id="cpu-track" aria-label="Список процессоров"></ol>
+    </section>
+
+    <section class="column" data-side="gpu">
+      <h2 class="column-title">Видеокарты</h2>
+      <ol class="track" id="gpu-track" aria-label="Список видеокарт"></ol>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

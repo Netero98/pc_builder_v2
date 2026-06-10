@@ -1,0 +1,20 @@
+{
+  "cpus": [
+    { "id": "i9-14900k", "name": "Intel Core i9-14900K", "score": 60897, "gpuRange": [28000, 50000] },
+    { "id": "r9-7950x", "name": "AMD Ryzen 9 7950X", "score": 62966, "gpuRange": [27000, 50000] },
+    { "id": "i7-13700k", "name": "Intel Core i7-13700K", "score": 46991, "gpuRange": [20000, 38000] },
+    { "id": "r7-7700x", "name": "AMD Ryzen 7 7700X", "score": 36121, "gpuRange": [15000, 32000] },
+    { "id": "i5-13600k", "name": "Intel Core i5-13600K", "score": 38380, "gpuRange": [14000, 30000] },
+    { "id": "r5-7600",   "name": "AMD Ryzen 5 7600",     "score": 27641, "gpuRange": [10000, 24000] },
+    { "id": "i3-13100",  "name": "Intel Core i3-13100",   "score": 16467, "gpuRange": [5000,  16000] }
+  ],
+  "gpus": [
+    { "id": "rtx-4090",   "name": "NVIDIA GeForce RTX 4090",   "score": 38790, "cpuRange": [40000, 70000] },
+    { "id": "rx-7900xtx", "name": "AMD Radeon RX 7900 XTX",    "score": 31474, "cpuRange": [38000, 70000] },
+    { "id": "rtx-4080",   "name": "NVIDIA GeForce RTX 4080",   "score": 30428, "cpuRange": [35000, 70000] },
+    { "id": "rtx-4070",   "name": "NVIDIA GeForce RTX 4070",   "score": 22737, "cpuRange": [28000, 55000] },
+    { "id": "rx-7700xt",  "name": "AMD Radeon RX 7700 XT",     "score": 17898, "cpuRange": [22000, 50000] },
+    { "id": "rtx-4060",   "name": "NVIDIA GeForce RTX 4060",   "score": 13945, "cpuRange": [18000, 45000] },
+    { "id": "gtx-1660s",  "name": "NVIDIA GeForce GTX 1660 Super", "score": 8793, "cpuRange": [12000, 38000] }
+  ]
+}

@@ -1,0 +1,169 @@
+:root {
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --surface-2: #f0f3fa;
+  --border: #e2e6ef;
+  --text: #1a2233;
+  --text-muted: #5a6478;
+  --cpu-accent: #2563eb;
+  --cpu-accent-soft: #dbe7ff;
+  --gpu-accent: #c026d3;
+  --gpu-accent-soft: #f5d6fe;
+  --match: #16a34a;
+  --match-soft: #d8f5e1;
+  --shadow: 0 1px 2px rgba(20, 30, 60, 0.04), 0 4px 12px rgba(20, 30, 60, 0.05);
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.page-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 16px;
+}
+
+.page-header h1 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.board {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.column {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 16px 8px;
+}
+
+.column-title {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.column[data-side="cpu"] .column-title { color: var(--cpu-accent); }
+.column[data-side="gpu"] .column-title { color: var(--gpu-accent); }
+
+.track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  margin: 0 -4px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.12s ease, border-color 0.12s ease, transform 0.12s ease;
+}
+
+.item + .item {
+  margin-top: 6px;
+}
+
+.item:hover {
+  background: var(--surface-2);
+}
+
+.item.active {
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
+.item .rank {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.item .name {
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item .score {
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+.column[data-side="cpu"] .item.match {
+  background: var(--match-soft);
+  border-color: var(--match);
+}
+
+.column[data-side="gpu"] .item.match {
+  background: var(--match-soft);
+  border-color: var(--match);
+}
+
+.column[data-side="cpu"] .item .score {
+  color: var(--cpu-accent);
+  border-color: var(--cpu-accent-soft);
+}
+
+.column[data-side="gpu"] .item .score {
+  color: var(--gpu-accent);
+  border-color: var(--gpu-accent-soft);
+}
+
+@media (max-width: 720px) {
+  .board {
+    grid-template-columns: 1fr;
+  }
+  .page-header, .board {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
