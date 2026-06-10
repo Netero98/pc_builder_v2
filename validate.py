@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """Validate PC Builder data.json.
 
+PC is for gaming, so we use **PassMark Single Thread** as the ordering
+metric (gaming is largely single-thread-bound). GPU compatibility ceilings
+must grow monotonically with ST.
+
 Checks:
 1. JSON validity + count.
-2. Every GPU's score is within at least one CPU's gpuRange (reachable).
-3. Every CPU's gpuRange matches at least one GPU (non-empty).
-4. No inverted or negative ranges.
-5. Bug case: i3-12100 must NOT match RTX 2060.
-6. List what i3-12100 IS compatible with.
+2. Every CPU has stScore and gpuRange; every GPU is reachable.
+3. No inverted or negative ranges.
+4. Sanity: i3-12100 + RTX 2060 should match (recommended pairing).
+5. Monotonicity: for any two CPUs A and B with stScore_A <= stScore_B,
+   gpuRange_B[1] >= gpuRange_A[1] AND gpuRange_B[0] >= gpuRange_A[0].
 
 Usage: python3 validate.py [path/to/data.json]
 """
@@ -32,10 +36,13 @@ def main() -> int:
 
     errors = []
 
+    # Basic checks
     for cpu in cpus:
         if "gpuRange" not in cpu:
             errors.append(f"CPU {cpu['id']}: missing gpuRange")
             continue
+        if "stScore" not in cpu:
+            errors.append(f"CPU {cpu['id']}: missing stScore (PassMark Single Thread)")
         lo, hi = cpu["gpuRange"]
         if lo > hi:
             errors.append(f"CPU {cpu['id']}: gpuRange inverted ({lo} > {hi})")
@@ -45,17 +52,17 @@ def main() -> int:
         if "cpuRange" in gpu:
             errors.append(f"GPU {gpu['id']}: legacy 'cpuRange' field present, should be removed")
 
-    # Reachable GPUs: each GPU must be in at least one CPU's gpuRange
+    # Reachable GPUs
     for gpu in gpus:
         if not any(
             cpu["gpuRange"][0] <= gpu["score"] <= cpu["gpuRange"][1]
             for cpu in cpus
         ):
             errors.append(
-                f"GPU {gpu['id']} (score={gpu['score']}) is NOT in any CPU's gpuRange"
+                f"GPU {gpu['id']} (G3D={gpu['score']}) is NOT in any CPU's gpuRange"
             )
 
-    # Non-empty gpuRange: every CPU must list at least one GPU
+    # Non-empty gpuRange
     for cpu in cpus:
         if not any(
             cpu["gpuRange"][0] <= gpu["score"] <= cpu["gpuRange"][1]
@@ -65,19 +72,33 @@ def main() -> int:
                 f"CPU {cpu['id']} gpuRange={cpu['gpuRange']} matches no GPU at all"
             )
 
-    # Sanity: i3-12100 + RTX 2060 SHOULD match (per multiple sources, RTX 2060 is
-    # in the recommended GPU list for i3-12100F)
+    # Sanity: i3-12100 + RTX 2060
     i3 = next((c for c in cpus if c["id"] == "i3-12100"), None)
     rtx2060 = next((g for g in gpus if g["id"] == "rtx-2060"), None)
     if i3 and rtx2060:
         match = i3["gpuRange"][0] <= rtx2060["score"] <= i3["gpuRange"][1]
-        print(f"=== i3-12100 vs RTX 2060 ===")
-        print(f"  i3-12100 score: {i3['score']}, gpuRange: {i3['gpuRange']}")
-        print(f"  RTX 2060 score: {rtx2060['score']}")
-        print(f"  Match? {match}  (expected: True — RTX 2060 is recommended for i3-12100)")
+        print("=== i3-12100 vs RTX 2060 ===")
+        print(f"  i3-12100: ST={i3.get('stScore', '?')}, gpuRange={i3['gpuRange']}")
+        print(f"  RTX 2060: G3D={rtx2060['score']}")
+        print(f"  Match? {match}  (expected: True)")
         print()
         if not match:
-            errors.append("i3-12100 + RTX 2060 SHOULD match (per data sources)")
+            errors.append("i3-12100 + RTX 2060 SHOULD match")
+
+    # Per-CPU match count
+    print("=== Per-CPU match count ===")
+    counts = []
+    for cpu in cpus:
+        n = sum(1 for g in gpus if cpu["gpuRange"][0] <= g["score"] <= cpu["gpuRange"][1])
+        counts.append((cpu['name'], n, cpu.get('stScore', 0)))
+    counts.sort(key=lambda x: x[1])
+    print("  Least matches:")
+    for name, n, st in counts[:5]:
+        print(f"    {n:3d}  ST={st:5}  {name}")
+    print("  Most matches:")
+    for name, n, st in counts[-5:]:
+        print(f"    {n:3d}  ST={st:5}  {name}")
+    print()
 
     # Show what i3-12100 actually pairs with
     if i3:
@@ -90,38 +111,39 @@ def main() -> int:
             print(f"  - {g['name']:35} G3D {g['score']}")
         print()
 
-    # Per-CPU match count
-    print("=== Per-CPU match count (out of 99 GPUs) ===")
-    counts = []
-    for cpu in cpus:
-        n = sum(1 for g in gpus if cpu["gpuRange"][0] <= g["score"] <= cpu["gpuRange"][1])
-        counts.append((cpu['name'], n))
-    counts.sort(key=lambda x: x[1])
-    print("  Least matches:")
-    for name, n in counts[:5]:
-        print(f"    {n:3d}  {name}")
-    print("  Most matches:")
-    for name, n in counts[-5:]:
-        print(f"    {n:3d}  {name}")
+    # Monotonicity check vs ST score
+    print("=== Monotonicity check: gpuRange bounds vs ST score ===")
+    sorted_cpus = sorted(cpus, key=lambda c: c.get("stScore", 0))
+    monotonic_errors = []
+    for i, cpu_a in enumerate(sorted_cpus):
+        for cpu_b in sorted_cpus[i + 1:]:
+            a_st = cpu_a.get("stScore", 0)
+            b_st = cpu_b.get("stScore", 0)
+            if a_st == 0 or b_st == 0:
+                continue
+            # Only flag when meaningfully apart (>= 100 ST points)
+            if b_st - a_st < 100:
+                continue
+            a_min, a_max = cpu_a["gpuRange"]
+            b_min, b_max = cpu_b["gpuRange"]
+            if b_max < a_max:
+                monotonic_errors.append(
+                    f"  {cpu_b['id']:15} (ST={b_st}, max={b_max}) "
+                    f"< {cpu_a['id']:15} (ST={a_st}, max={a_max})"
+                )
+            if b_min < a_min:
+                monotonic_errors.append(
+                    f"  {cpu_b['id']:15} (ST={b_st}, min={b_min}) "
+                    f"< {cpu_a['id']:15} (ST={a_st}, min={a_min})"
+                )
+    if monotonic_errors:
+        print(f"  Found {len(monotonic_errors)} anomalies:")
+        for e in monotonic_errors:
+            print(e)
+    else:
+        print("  OK: no anomalies")
+    errors.extend(monotonic_errors)
     print()
-
-    # Show top-CPU pairings
-    if rtx2060:
-        suitable = [
-            c for c in cpus
-            if rtx2060["score"] >= c["gpuRange"][0] and rtx2060["score"] <= c["gpuRange"][1]
-        ]
-        print(f"=== CPUs compatible with RTX 2060 ({len(suitable)}) ===")
-        for c in suitable:
-            print(f"  - {c['name']:35} Mark {c['score']}")
-        print()
-
-    # Check: every GPU must have at least one CPU that pairs with it
-    for gpu in gpus:
-        cpus_pairing = [c for c in cpus
-                        if c["gpuRange"][0] <= gpu["score"] <= c["gpuRange"][1]]
-        if not cpus_pairing:
-            errors.append(f"GPU {gpu['id']} has no CPU pairing it")
 
     print()
     if errors:

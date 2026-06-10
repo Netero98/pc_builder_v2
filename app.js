@@ -4,8 +4,12 @@ const gpuTrack = document.getElementById('gpu-track');
 let cpus = [];
 let gpus = [];
 
+function getScore(item) {
+  return item.stScore !== undefined ? item.stScore : item.score;
+}
+
 function sortByScoreDesc(a, b) {
-  return b.score - a.score;
+  return getScore(b) - getScore(a);
 }
 
 function inRange(value, range) {
@@ -20,7 +24,7 @@ function renderTrack(container, items, side) {
     const li = document.createElement('li');
     li.className = 'item';
     li.dataset.id = item.id;
-    li.dataset.score = item.score;
+    li.dataset.score = getScore(item);
     li.dataset.side = side;
 
     const rank = document.createElement('span');
@@ -33,7 +37,7 @@ function renderTrack(container, items, side) {
 
     const score = document.createElement('span');
     score.className = 'score';
-    score.textContent = item.score.toLocaleString('ru-RU');
+    score.textContent = getScore(item).toLocaleString('ru-RU');
 
     li.append(rank, name, score);
     li.addEventListener('click', () => handleSelect(item.id, side));

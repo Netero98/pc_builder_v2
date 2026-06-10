@@ -3,623 +3,623 @@
     {
       "id": "r9-9950x3d",
       "name": "AMD Ryzen 9 9950X3D",
-      "score": 70151,
       "gpuRange": [
-        23217,
+        16467,
         38951
-      ]
+      ],
+      "stScore": 4741
     },
     {
       "id": "u9-285k",
       "name": "Intel Core Ultra 9 285K",
-      "score": 67273,
       "gpuRange": [
-        22048,
+        16467,
         38951
-      ]
+      ],
+      "stScore": 5087
     },
     {
       "id": "r9-9950x",
       "name": "AMD Ryzen 9 9950X",
-      "score": 65760,
       "gpuRange": [
-        22048,
+        16467,
         38951
-      ]
+      ],
+      "stScore": 4729
     },
     {
       "id": "r9-7950x3d",
       "name": "AMD Ryzen 9 7950X3D",
-      "score": 62321,
       "gpuRange": [
-        22048,
-        38951
-      ]
+        16467,
+        38072
+      ],
+      "stScore": 4146
     },
     {
       "id": "r9-7950x",
       "name": "AMD Ryzen 9 7950X",
-      "score": 62180,
       "gpuRange": [
-        22048,
-        38951
-      ]
+        16467,
+        38072
+      ],
+      "stScore": 4253
     },
     {
       "id": "u7-265k",
       "name": "Intel Core Ultra 7 265K",
-      "score": 58665,
       "gpuRange": [
-        20250,
-        38072
-      ]
+        16467,
+        38951
+      ],
+      "stScore": 4929
     },
     {
       "id": "i9-14900ks",
       "name": "Intel Core i9-14900KS",
-      "score": 60039,
       "gpuRange": [
-        22048,
+        16467,
         38951
-      ]
+      ],
+      "stScore": 4813
     },
     {
       "id": "i9-14900k",
       "name": "Intel Core i9-14900K",
-      "score": 58330,
       "gpuRange": [
-        21453,
+        16467,
         38951
-      ]
+      ],
+      "stScore": 4690
     },
     {
       "id": "i9-13900ks",
       "name": "Intel Core i9-13900KS",
-      "score": 60485,
       "gpuRange": [
-        22048,
+        16467,
         38951
-      ]
+      ],
+      "stScore": 4716
     },
     {
       "id": "i9-13900k",
       "name": "Intel Core i9-13900K",
-      "score": 58166,
       "gpuRange": [
-        20250,
+        16467,
         38951
-      ]
+      ],
+      "stScore": 4598
     },
     {
       "id": "r9-9900x",
       "name": "AMD Ryzen 9 9900X",
-      "score": 54412,
       "gpuRange": [
-        20250,
+        16467,
         38951
-      ]
+      ],
+      "stScore": 4677
     },
     {
       "id": "i7-14700k",
       "name": "Intel Core i7-14700K",
-      "score": 51986,
       "gpuRange": [
-        20250,
+        16467,
         38072
-      ]
+      ],
+      "stScore": 4457
     },
     {
       "id": "r9-7900x",
       "name": "AMD Ryzen 9 7900X",
-      "score": 51261,
       "gpuRange": [
-        18594,
-        38951
-      ]
+        16467,
+        38072
+      ],
+      "stScore": 4228
     },
     {
       "id": "i7-13700k",
       "name": "Intel Core i7-13700K",
-      "score": 45684,
       "gpuRange": [
-        18594,
-        34456
-      ]
+        16467,
+        38072
+      ],
+      "stScore": 4328
     },
     {
       "id": "r9-5950x",
       "name": "AMD Ryzen 9 5950X",
-      "score": 45292,
       "gpuRange": [
-        16467,
-        38072
-      ]
+        11616,
+        26890
+      ],
+      "stScore": 3476
     },
     {
       "id": "i9-14900hx",
       "name": "Intel Core i9-14900HX",
-      "score": 44030,
       "gpuRange": [
-        16063,
-        34456
-      ]
+        16467,
+        38072
+      ],
+      "stScore": 4185
     },
     {
       "id": "i9-12900ks",
       "name": "Intel Core i9-12900KS",
-      "score": 43409,
       "gpuRange": [
         16467,
         38072
-      ]
+      ],
+      "stScore": 4323
     },
     {
       "id": "i9-12900k",
       "name": "Intel Core i9-12900K",
-      "score": 41133,
       "gpuRange": [
-        16063,
+        16467,
         38072
-      ]
+      ],
+      "stScore": 4128
     },
     {
       "id": "r7-9800x3d",
       "name": "AMD Ryzen 7 9800X3D",
-      "score": 39966,
       "gpuRange": [
-        18594,
+        16467,
         38072
-      ]
+      ],
+      "stScore": 4425
     },
     {
       "id": "r9-5900x",
       "name": "AMD Ryzen 9 5900X",
-      "score": 38911,
       "gpuRange": [
-        15231,
-        38072
-      ]
+        11616,
+        26890
+      ],
+      "stScore": 3465
     },
     {
       "id": "r7-9700x",
       "name": "AMD Ryzen 7 9700X",
-      "score": 37038,
       "gpuRange": [
-        17308,
-        38072
-      ]
+        16467,
+        38951
+      ],
+      "stScore": 4647
     },
     {
       "id": "i5-14600k",
       "name": "Intel Core i5-14600K",
-      "score": 38453,
       "gpuRange": [
         16467,
-        34456
-      ]
+        38072
+      ],
+      "stScore": 4268
     },
     {
       "id": "i5-13600k",
       "name": "Intel Core i5-13600K",
-      "score": 37520,
       "gpuRange": [
-        16063,
-        31840
-      ]
+        16467,
+        38072
+      ],
+      "stScore": 4115
     },
     {
       "id": "r7-7700x",
       "name": "AMD Ryzen 7 7700X",
-      "score": 35532,
       "gpuRange": [
-        15231,
-        34456
-      ]
+        16467,
+        38072
+      ],
+      "stScore": 4178
     },
     {
       "id": "r7-7800x3d",
       "name": "AMD Ryzen 7 7800X3D",
-      "score": 34281,
       "gpuRange": [
-        16063,
-        38072
-      ]
+        11616,
+        34456
+      ],
+      "stScore": 3760
     },
     {
       "id": "i7-12700k",
       "name": "Intel Core i7-12700K",
-      "score": 34276,
       "gpuRange": [
-        14093,
-        31840
-      ]
+        16467,
+        38072
+      ],
+      "stScore": 4004
     },
     {
       "id": "r7-7700",
       "name": "AMD Ryzen 7 7700",
-      "score": 34356,
       "gpuRange": [
-        15057,
-        31840
-      ]
+        16467,
+        38072
+      ],
+      "stScore": 4053
     },
     {
       "id": "r9-3900x",
       "name": "AMD Ryzen 9 3900X",
-      "score": 32491,
       "gpuRange": [
-        13397,
-        24384
-      ]
+        8788,
+        20250
+      ],
+      "stScore": 2703
     },
     {
       "id": "r5-9600x",
       "name": "AMD Ryzen 5 9600X",
-      "score": 30088,
       "gpuRange": [
-        14093,
-        31840
-      ]
+        16467,
+        38951
+      ],
+      "stScore": 4571
     },
     {
       "id": "i5-14400f",
       "name": "Intel Core i5-14400F",
-      "score": 25524,
       "gpuRange": [
-        12615,
-        26890
-      ]
+        11616,
+        34456
+      ],
+      "stScore": 3703
     },
     {
       "id": "r7-5700x3d",
       "name": "AMD Ryzen 7 5700X3D",
-      "score": 26308,
       "gpuRange": [
-        13514,
-        31566
-      ]
+        8788,
+        22609
+      ],
+      "stScore": 2968
     },
     {
       "id": "r7-5800x3d",
       "name": "AMD Ryzen 7 5800X3D",
-      "score": 28301,
       "gpuRange": [
-        13514,
-        34456
-      ]
+        11616,
+        22609
+      ],
+      "stScore": 3234
     },
     {
       "id": "r5-7600x",
       "name": "AMD Ryzen 5 7600X",
-      "score": 28293,
       "gpuRange": [
-        12615,
-        31840
-      ]
+        16467,
+        38072
+      ],
+      "stScore": 4131
     },
     {
       "id": "i5-12600k",
       "name": "Intel Core i5-12600K",
-      "score": 27528,
       "gpuRange": [
-        12615,
-        26890
-      ]
+        11616,
+        34456
+      ],
+      "stScore": 3919
     },
     {
       "id": "r5-7600",
       "name": "AMD Ryzen 5 7600",
-      "score": 26975,
       "gpuRange": [
         11616,
-        26890
-      ]
+        34456
+      ],
+      "stScore": 3908
     },
     {
       "id": "r7-5700x",
       "name": "AMD Ryzen 7 5700X",
-      "score": 26583,
       "gpuRange": [
         11616,
         26890
-      ]
+      ],
+      "stScore": 3387
     },
     {
       "id": "i5-13400f",
       "name": "Intel Core i5-13400F",
-      "score": 24945,
       "gpuRange": [
         11616,
         26890
-      ]
+      ],
+      "stScore": 3632
     },
     {
       "id": "r5-5600x",
       "name": "AMD Ryzen 5 5600X",
-      "score": 21836,
       "gpuRange": [
-        10040,
+        11616,
         26890
-      ]
+      ],
+      "stScore": 3366
     },
     {
       "id": "r5-5600",
       "name": "AMD Ryzen 5 5600",
-      "score": 21518,
       "gpuRange": [
-        9624,
-        26890
-      ]
+        11616,
+        22609
+      ],
+      "stScore": 3255
     },
     {
       "id": "i5-12400f",
       "name": "Intel Core i5-12400F",
-      "score": 19576,
       "gpuRange": [
-        9624,
-        22609
-      ]
+        11616,
+        26890
+      ],
+      "stScore": 3487
     },
     {
       "id": "r5-5500",
       "name": "AMD Ryzen 5 5500",
-      "score": 19256,
       "gpuRange": [
-        8788,
+        11616,
         22609
-      ]
+      ],
+      "stScore": 3060
     },
     {
       "id": "i5-11400f",
       "name": "Intel Core i5-11400F",
-      "score": 16886,
       "gpuRange": [
-        7872,
-        20250
-      ]
+        8788,
+        22609
+      ],
+      "stScore": 2980
     },
     {
       "id": "i7-11700k",
       "name": "Intel Core i7-11700K",
-      "score": 24340,
       "gpuRange": [
         11616,
-        20250
-      ]
+        26890
+      ],
+      "stScore": 3386
     },
     {
       "id": "r7-5800x",
       "name": "AMD Ryzen 7 5800X",
-      "score": 27678,
       "gpuRange": [
-        13397,
+        11616,
         26890
-      ]
+      ],
+      "stScore": 3448
     },
     {
       "id": "i7-10700k",
       "name": "Intel Core i7-10700K",
-      "score": 18519,
       "gpuRange": [
-        10040,
-        16467
-      ]
+        11616,
+        22609
+      ],
+      "stScore": 3037
     },
     {
       "id": "r7-3800x",
       "name": "AMD Ryzen 7 3800X",
-      "score": 22974,
       "gpuRange": [
-        11080,
-        18134
-      ]
+        8788,
+        20250
+      ],
+      "stScore": 2710
     },
     {
       "id": "r7-3700x",
       "name": "AMD Ryzen 7 3700X",
-      "score": 22400,
       "gpuRange": [
-        11080,
-        18134
-      ]
+        8788,
+        20250
+      ],
+      "stScore": 2654
     },
     {
       "id": "i5-10400f",
       "name": "Intel Core i5-10400F",
-      "score": 12103,
       "gpuRange": [
-        7872,
-        16724
-      ]
+        8788,
+        20250
+      ],
+      "stScore": 2540
     },
     {
       "id": "i5-9400f",
       "name": "Intel Core i5-9400F",
-      "score": 9462,
       "gpuRange": [
-        6363,
-        12676
-      ]
+        7061,
+        16724
+      ],
+      "stScore": 2422
     },
     {
       "id": "i7-8700k",
       "name": "Intel Core i7-8700K",
-      "score": 13568,
       "gpuRange": [
-        6363,
-        16063
-      ]
+        8788,
+        20250
+      ],
+      "stScore": 2715
     },
     {
       "id": "i7-7700k",
       "name": "Intel Core i7-7700K",
-      "score": 9636,
       "gpuRange": [
-        3899,
-        12676
-      ]
+        8788,
+        20250
+      ],
+      "stScore": 2702
     },
     {
       "id": "i7-6700k",
       "name": "Intel Core i7-6700K",
-      "score": 8939,
       "gpuRange": [
-        3291,
-        11080
-      ]
+        7061,
+        16724
+      ],
+      "stScore": 2497
     },
     {
       "id": "i5-6600k",
       "name": "Intel Core i5-6600K",
-      "score": 6305,
       "gpuRange": [
-        3291,
-        10040
-      ]
+        7061,
+        16724
+      ],
+      "stScore": 2315
     },
     {
       "id": "i3-14100",
       "name": "Intel Core i3-14100",
-      "score": 15100,
       "gpuRange": [
-        7872,
-        19501
-      ]
+        11616,
+        34456
+      ],
+      "stScore": 3762
     },
     {
       "id": "i3-12100",
       "name": "Intel Core i3-12100",
-      "score": 12460,
       "gpuRange": [
-        7872,
-        16724
-      ]
+        11616,
+        22609
+      ],
+      "stScore": 3230
     },
     {
       "id": "i3-10100",
       "name": "Intel Core i3-10100",
-      "score": 8496,
       "gpuRange": [
-        7872,
-        13397
-      ]
+        8788,
+        20250
+      ],
+      "stScore": 2589
     },
     {
       "id": "r3-3100",
       "name": "AMD Ryzen 3 3100",
-      "score": 11524,
       "gpuRange": [
         7061,
-        11616
-      ]
+        16724
+      ],
+      "stScore": 2411
     },
     {
       "id": "r5-1600",
       "name": "AMD Ryzen 5 1600",
-      "score": 12253,
       "gpuRange": [
         7061,
         12676
-      ]
+      ],
+      "stScore": 2065
     },
     {
       "id": "r5-2600",
       "name": "AMD Ryzen 5 2600",
-      "score": 13132,
       "gpuRange": [
         7061,
-        12676
-      ]
+        15057
+      ],
+      "stScore": 2235
     },
     {
       "id": "r5-3600",
       "name": "AMD Ryzen 5 3600",
-      "score": 17666,
       "gpuRange": [
-        7872,
-        19501
-      ]
+        8788,
+        20250
+      ],
+      "stScore": 2559
     },
     {
       "id": "fx-9590",
       "name": "AMD FX-9590 Eight-Core",
-      "score": 6832,
       "gpuRange": [
         3291,
-        8788
-      ]
+        10040
+      ],
+      "stScore": 1806
     },
     {
       "id": "fx-8350",
       "name": "AMD FX-8350 Eight-Core",
-      "score": 6092,
       "gpuRange": [
         3291,
-        7061
-      ]
+        10040
+      ],
+      "stScore": 1580
     },
     {
       "id": "r7-2700x",
       "name": "AMD Ryzen 7 2700X",
-      "score": 17434,
       "gpuRange": [
-        9065,
-        15231
-      ]
+        7061,
+        16724
+      ],
+      "stScore": 2415
     },
     {
       "id": "r7-1700x",
       "name": "AMD Ryzen 7 1700X",
-      "score": 15500,
       "gpuRange": [
-        7961,
-        14093
-      ]
+        7061,
+        15057
+      ],
+      "stScore": 2100
     },
     {
       "id": "tr-3960x",
       "name": "AMD Threadripper 3960X",
-      "score": 54784,
       "gpuRange": [
-        20250,
-        38072
-      ]
+        8788,
+        20250
+      ],
+      "stScore": 2683
     },
     {
       "id": "tr-2990wx",
       "name": "AMD Threadripper 2990WX",
-      "score": 32058,
       "gpuRange": [
-        13397,
-        22108
-      ]
+        7061,
+        15057
+      ],
+      "stScore": 2277
     },
     {
       "id": "i9-9980xe",
       "name": "Intel Core i9-9980XE",
-      "score": 31479,
       "gpuRange": [
-        13397,
-        18134
-      ]
+        8788,
+        20250
+      ],
+      "stScore": 2554
     },
     {
       "id": "i9-7980xe",
       "name": "Intel Core i9-7980XE",
-      "score": 29529,
       "gpuRange": [
-        12615,
-        16063
-      ]
+        7061,
+        16724
+      ],
+      "stScore": 2434
     },
     {
       "id": "i7-6950x",
       "name": "Intel Core i7-6950X",
-      "score": 17000,
       "gpuRange": [
-        9638,
-        14225
-      ]
+        7061,
+        16724
+      ],
+      "stScore": 2332
     }
   ],
   "gpus": [
