@@ -33,6 +33,11 @@ html, body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 32px 24px 16px;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+  border-bottom: 1px solid var(--border);
 }
 
 .page-header h1 {
@@ -54,28 +59,26 @@ html, body {
   padding: 16px 24px 48px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-.column {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 16px 16px 8px;
+  gap: 32px;
 }
 
 .column-title {
-  margin: 0 0 12px;
+  position: sticky;
+  top: 96px;
+  background: var(--bg);
+  padding: 8px 0;
+  margin: 0 0 8px;
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--text-muted);
+  z-index: 5;
+  border-bottom: 1px solid var(--border);
 }
 
-.column[data-side="cpu"] .column-title { color: var(--cpu-accent); }
-.column[data-side="gpu"] .column-title { color: var(--gpu-accent); }
+.column[data-side="cpu"] .column-title { color: var(--cpu-accent); border-bottom-color: var(--cpu-accent-soft); }
+.column[data-side="gpu"] .column-title { color: var(--gpu-accent); border-bottom-color: var(--gpu-accent-soft); }
 
 .track {
   list-style: none;
@@ -83,32 +86,15 @@ html, body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  max-height: 75vh;
-  overflow-y: auto;
-  padding-right: 4px;
-}
-
-.track::-webkit-scrollbar {
-  width: 8px;
-}
-
-.track::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 4px;
-}
-
-.track::-webkit-scrollbar-thumb:hover {
-  background: #c4cad6;
 }
 
 .item {
   position: relative;
   display: grid;
-  grid-template-columns: 28px 1fr auto;
+  grid-template-columns: 36px 1fr auto;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   padding: 10px 12px;
-  margin: 0 -4px;
   border-radius: 8px;
   border: 1px solid transparent;
   cursor: pointer;
@@ -116,15 +102,15 @@ html, body {
 }
 
 .item + .item {
-  margin-top: 6px;
+  margin-top: 2px;
 }
 
 .item:hover {
-  background: var(--surface-2);
+  background: var(--surface);
 }
 
 .item.active {
-  background: var(--surface-2);
+  background: var(--surface);
   border-color: var(--border);
 }
 
@@ -148,7 +134,7 @@ html, body {
   font-variant-numeric: tabular-nums;
   font-size: 12px;
   color: var(--text-muted);
-  background: var(--surface-2);
+  background: var(--surface);
   padding: 3px 8px;
   border-radius: 999px;
   border: 1px solid var(--border);
@@ -177,6 +163,7 @@ html, body {
 @media (max-width: 720px) {
   .board {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .page-header, .board {
     padding-left: 16px;
