@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CPU ↔ GPU Compatibility</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=11" />
 </head>
 <body>
   <header class="page-header">
@@ -13,17 +13,17 @@
   </header>
 
   <main class="board" id="board">
-    <section class="column" data-side="cpu">
+    <section class="column" data-side="cpu" id="cpu-column">
       <h2 class="column-title">Процессоры</h2>
       <ol class="track" id="cpu-track" aria-label="Список процессоров"></ol>
     </section>
 
-    <section class="column" data-side="gpu">
+    <section class="column" data-side="gpu" id="gpu-column">
       <h2 class="column-title">Видеокарты</h2>
       <ol class="track" id="gpu-track" aria-label="Список видеокарт"></ol>
     </section>
   </main>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=11"></script>
 </body>
 </html>

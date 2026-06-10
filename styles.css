@@ -13,6 +13,8 @@
   --match-soft: #d8f5e1;
   --shadow: 0 1px 2px rgba(20, 30, 60, 0.04), 0 4px 12px rgba(20, 30, 60, 0.05);
   --radius: 10px;
+  --bar-track-width: 110px;
+  --bar-width: 70px;
 }
 
 * {
@@ -30,7 +32,7 @@ html, body {
 }
 
 .page-header {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 32px 24px 16px;
   position: sticky;
@@ -54,12 +56,18 @@ html, body {
 }
 
 .board {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 16px 24px 48px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 40px;
+  position: relative;
+}
+
+.column {
+  position: relative;
+  min-width: 0;
 }
 
 .column-title {
@@ -91,14 +99,20 @@ html, body {
 .item {
   position: relative;
   display: grid;
-  grid-template-columns: 36px 1fr auto;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 12px;
+  grid-template-rows: auto 4px;
+  gap: 6px;
+  padding: 10px 12px 8px;
   border-radius: 8px;
   border: 1px solid transparent;
   cursor: pointer;
   transition: background-color 0.12s ease, border-color 0.12s ease, transform 0.12s ease;
+}
+
+.item-row {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  align-items: center;
+  gap: 12px;
 }
 
 .item + .item {
@@ -140,6 +154,35 @@ html, body {
   border: 1px solid var(--border);
 }
 
+.item .bar {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: var(--surface-2);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.item .bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc(var(--power, 0) * 1%);
+  border-radius: 2px;
+}
+
+.column[data-side="cpu"] .item .bar::after {
+  left: 0;
+  background: var(--cpu-accent);
+}
+
+.column[data-side="gpu"] .item .bar::after {
+  right: 0;
+  background: var(--gpu-accent);
+}
+
 .column[data-side="cpu"] .item.match {
   background: var(--match-soft);
   border-color: var(--match);
@@ -158,6 +201,21 @@ html, body {
 .column[data-side="gpu"] .item .score {
   color: var(--gpu-accent);
   border-color: var(--gpu-accent-soft);
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --bar-track-width: 80px;
+    --bar-width: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --bar-track-width: 60px;
+    --bar-width: 30px;
+  }
+  .board { gap: 20px; }
 }
 
 @media (max-width: 720px) {

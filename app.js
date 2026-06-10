@@ -1,3 +1,4 @@
+const board = document.getElementById('board');
 const cpuTrack = document.getElementById('cpu-track');
 const gpuTrack = document.getElementById('gpu-track');
 
@@ -20,12 +21,18 @@ function inRange(value, range) {
 
 function renderTrack(container, items, side) {
   container.innerHTML = '';
+  const maxScore = items.reduce((m, it) => Math.max(m, getScore(it)), 0);
   items.forEach((item, index) => {
     const li = document.createElement('li');
     li.className = 'item';
     li.dataset.id = item.id;
     li.dataset.score = getScore(item);
     li.dataset.side = side;
+    const power = maxScore > 0 ? (getScore(item) / maxScore) * 100 : 0;
+    li.dataset.power = power.toFixed(1);
+
+    const row = document.createElement('div');
+    row.className = 'item-row';
 
     const rank = document.createElement('span');
     rank.className = 'rank';
@@ -39,7 +46,13 @@ function renderTrack(container, items, side) {
     score.className = 'score';
     score.textContent = getScore(item).toLocaleString('ru-RU');
 
-    li.append(rank, name, score);
+    row.append(rank, name, score);
+
+    const bar = document.createElement('span');
+    bar.className = 'bar';
+    bar.style.setProperty('--power', power.toFixed(1));
+
+    li.append(row, bar);
     li.addEventListener('click', () => handleSelect(item.id, side));
     container.appendChild(li);
   });
@@ -82,7 +95,7 @@ function handleSelect(id, side) {
 
 async function init() {
   try {
-    const res = await fetch('data.json');
+    const res = await fetch('data.json', { cache: 'no-store' });
     const data = await res.json();
     cpus = [...data.cpus].sort(sortByScoreDesc);
     gpus = [...data.gpus].sort(sortByScoreDesc);
