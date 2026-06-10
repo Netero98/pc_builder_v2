@@ -61,6 +61,84 @@ function renderTrack(container, items, side) {
 function clearMatches() {
   document.querySelectorAll('.item.match').forEach(el => el.classList.remove('match'));
   document.querySelectorAll('.item.active').forEach(el => el.classList.remove('active'));
+  clearConnections();
+}
+
+function createConnectionsLayer() {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('class', 'connections');
+  svg.setAttribute('aria-hidden', 'true');
+  board.appendChild(svg);
+  return svg;
+}
+
+let connectionsSvg = null;
+let connectionsRaf = 0;
+
+function clearConnections() {
+  if (connectionsSvg) connectionsSvg.innerHTML = '';
+  cancelAnimationFrame(connectionsRaf);
+}
+
+function scheduleDrawConnections() {
+  cancelAnimationFrame(connectionsRaf);
+  connectionsRaf = requestAnimationFrame(drawConnections);
+}
+
+function drawConnections() {
+  if (!connectionsSvg) return;
+  connectionsSvg.innerHTML = '';
+
+  const activeEl = document.querySelector('.item.active');
+  if (!activeEl) return;
+
+  const boardRect = board.getBoundingClientRect();
+  connectionsSvg.setAttribute('viewBox', `0 0 ${boardRect.width} ${boardRect.height}`);
+  connectionsSvg.setAttribute('width', boardRect.width);
+  connectionsSvg.setAttribute('height', boardRect.height);
+
+  const activeRect = activeEl.getBoundingClientRect();
+  const activeSide = activeEl.dataset.side;
+  const x1 = activeSide === 'cpu'
+    ? activeRect.right - boardRect.left
+    : activeRect.left - boardRect.left;
+  const y1 = activeRect.top + activeRect.height / 2 - boardRect.top;
+
+  const matches = document.querySelectorAll('.item.match');
+  matches.forEach((endEl) => {
+    const endRect = endEl.getBoundingClientRect();
+    const x2 = endEl.dataset.side === 'gpu'
+      ? endRect.left - boardRect.left
+      : endRect.right - boardRect.left;
+    const y2 = endRect.top + endRect.height / 2 - boardRect.top;
+
+    const dx = Math.max(40, Math.abs(x2 - x1) / 2);
+    const c1x = x1 + (activeSide === 'cpu' ? dx : -dx);
+    const c2x = x2 + (endEl.dataset.side === 'gpu' ? -dx : dx);
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', `M ${x1} ${y1} C ${c1x} ${y1}, ${c2x} ${y2}, ${x2} ${y2}`);
+    path.setAttribute('marker-end', 'url(#arrow-head)');
+    connectionsSvg.appendChild(path);
+  });
+
+  if (!connectionsSvg.querySelector('#arrow-head')) {
+    const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+    const marker = document.createElementNS('http://www.w3.org/2000/svg', 'marker');
+    marker.setAttribute('id', 'arrow-head');
+    marker.setAttribute('viewBox', '0 0 10 10');
+    marker.setAttribute('refX', '8');
+    marker.setAttribute('refY', '5');
+    marker.setAttribute('markerWidth', '6');
+    marker.setAttribute('markerHeight', '6');
+    marker.setAttribute('orient', 'auto-start-reverse');
+    const arrow = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    arrow.setAttribute('d', 'M 0 0 L 10 5 L 0 10 z');
+    arrow.setAttribute('fill', 'var(--match)');
+    marker.appendChild(arrow);
+    defs.appendChild(marker);
+    connectionsSvg.appendChild(defs);
+  }
 }
 
 function findMatchingGpus(cpu) {
@@ -91,6 +169,8 @@ function handleSelect(id, side) {
     const el = document.querySelector(`.item[data-side="${targetSide}"][data-id="${m.id}"]`);
     if (el) el.classList.add('match');
   });
+
+  scheduleDrawConnections();
 }
 
 async function init() {
@@ -101,6 +181,9 @@ async function init() {
     gpus = [...data.gpus].sort(sortByScoreDesc);
     renderTrack(cpuTrack, cpus, 'cpu');
     renderTrack(gpuTrack, gpus, 'gpu');
+    connectionsSvg = createConnectionsLayer();
+    window.addEventListener('scroll', scheduleDrawConnections, { passive: true });
+    window.addEventListener('resize', scheduleDrawConnections);
   } catch (err) {
     console.error('Не удалось загрузить data.json:', err);
     cpuTrack.innerHTML = '<li class="item">Не удалось загрузить данные</li>';
