@@ -42,6 +42,15 @@ function renderTrack(container, items, side) {
     name.className = 'name';
     name.textContent = item.name;
 
+    if (item.verified) {
+      const check = document.createElement('span');
+      check.className = 'verified';
+      check.textContent = '\u2713';
+      check.title = 'Данные проверены человеком';
+      check.setAttribute('aria-label', 'Проверено');
+      name.appendChild(check);
+    }
+
     const score = document.createElement('span');
     score.className = 'score';
     score.textContent = getScore(item).toLocaleString('ru-RU');

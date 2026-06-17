@@ -9,7 +9,8 @@ window.PC_DATA = {
         16467,
         38951
       ],
-      "stScore": 4741
+      "stScore": 4741,
+      "verified": false
     },
     {
       "id": "u9-285k",
@@ -18,7 +19,8 @@ window.PC_DATA = {
         16467,
         38951
       ],
-      "stScore": 5087
+      "stScore": 5087,
+      "verified": false
     },
     {
       "id": "r9-9950x",
@@ -27,7 +29,8 @@ window.PC_DATA = {
         16467,
         38951
       ],
-      "stScore": 4729
+      "stScore": 4729,
+      "verified": false
     },
     {
       "id": "r9-7950x3d",
@@ -36,7 +39,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4146
+      "stScore": 4146,
+      "verified": false
     },
     {
       "id": "r9-7950x",
@@ -45,7 +49,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4253
+      "stScore": 4253,
+      "verified": false
     },
     {
       "id": "u7-265k",
@@ -54,7 +59,8 @@ window.PC_DATA = {
         16467,
         38951
       ],
-      "stScore": 4929
+      "stScore": 4929,
+      "verified": false
     },
     {
       "id": "i9-14900ks",
@@ -63,7 +69,8 @@ window.PC_DATA = {
         16467,
         38951
       ],
-      "stScore": 4813
+      "stScore": 4813,
+      "verified": false
     },
     {
       "id": "i9-14900k",
@@ -72,7 +79,8 @@ window.PC_DATA = {
         16467,
         38951
       ],
-      "stScore": 4690
+      "stScore": 4690,
+      "verified": false
     },
     {
       "id": "i9-13900ks",
@@ -81,7 +89,8 @@ window.PC_DATA = {
         16467,
         38951
       ],
-      "stScore": 4716
+      "stScore": 4716,
+      "verified": false
     },
     {
       "id": "i9-13900k",
@@ -90,7 +99,8 @@ window.PC_DATA = {
         16467,
         38951
       ],
-      "stScore": 4598
+      "stScore": 4598,
+      "verified": false
     },
     {
       "id": "r9-9900x",
@@ -99,7 +109,8 @@ window.PC_DATA = {
         16467,
         38951
       ],
-      "stScore": 4677
+      "stScore": 4677,
+      "verified": false
     },
     {
       "id": "i7-14700k",
@@ -108,7 +119,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4457
+      "stScore": 4457,
+      "verified": false
     },
     {
       "id": "r9-7900x",
@@ -117,7 +129,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4228
+      "stScore": 4228,
+      "verified": false
     },
     {
       "id": "i7-13700k",
@@ -126,7 +139,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4328
+      "stScore": 4328,
+      "verified": false
     },
     {
       "id": "r9-5950x",
@@ -135,7 +149,8 @@ window.PC_DATA = {
         11616,
         26890
       ],
-      "stScore": 3476
+      "stScore": 3476,
+      "verified": false
     },
     {
       "id": "i9-14900hx",
@@ -144,7 +159,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4185
+      "stScore": 4185,
+      "verified": false
     },
     {
       "id": "i9-12900ks",
@@ -153,7 +169,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4323
+      "stScore": 4323,
+      "verified": false
     },
     {
       "id": "i9-12900k",
@@ -162,7 +179,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4128
+      "stScore": 4128,
+      "verified": false
     },
     {
       "id": "r7-9800x3d",
@@ -171,7 +189,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4425
+      "stScore": 4425,
+      "verified": false
     },
     {
       "id": "r9-5900x",
@@ -180,7 +199,8 @@ window.PC_DATA = {
         11616,
         26890
       ],
-      "stScore": 3465
+      "stScore": 3465,
+      "verified": false
     },
     {
       "id": "r7-9700x",
@@ -189,7 +209,8 @@ window.PC_DATA = {
         16467,
         38951
       ],
-      "stScore": 4647
+      "stScore": 4647,
+      "verified": false
     },
     {
       "id": "i5-14600k",
@@ -198,7 +219,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4268
+      "stScore": 4268,
+      "verified": false
     },
     {
       "id": "i5-13600k",
@@ -207,7 +229,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4115
+      "stScore": 4115,
+      "verified": false
     },
     {
       "id": "r7-7700x",
@@ -216,7 +239,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4178
+      "stScore": 4178,
+      "verified": false
     },
     {
       "id": "r7-7800x3d",
@@ -225,7 +249,8 @@ window.PC_DATA = {
         11616,
         34456
       ],
-      "stScore": 3760
+      "stScore": 3760,
+      "verified": false
     },
     {
       "id": "i7-12700k",
@@ -234,7 +259,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4004
+      "stScore": 4004,
+      "verified": false
     },
     {
       "id": "r7-7700",
@@ -243,7 +269,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4053
+      "stScore": 4053,
+      "verified": false
     },
     {
       "id": "r9-3900x",
@@ -252,7 +279,8 @@ window.PC_DATA = {
         8788,
         20250
       ],
-      "stScore": 2703
+      "stScore": 2703,
+      "verified": false
     },
     {
       "id": "r5-9600x",
@@ -261,7 +289,8 @@ window.PC_DATA = {
         16467,
         38951
       ],
-      "stScore": 4571
+      "stScore": 4571,
+      "verified": false
     },
     {
       "id": "i5-14400f",
@@ -270,7 +299,8 @@ window.PC_DATA = {
         11616,
         34456
       ],
-      "stScore": 3703
+      "stScore": 3703,
+      "verified": false
     },
     {
       "id": "r7-5700x3d",
@@ -279,7 +309,8 @@ window.PC_DATA = {
         8788,
         22609
       ],
-      "stScore": 2968
+      "stScore": 2968,
+      "verified": false
     },
     {
       "id": "r7-5800x3d",
@@ -288,7 +319,8 @@ window.PC_DATA = {
         11616,
         22609
       ],
-      "stScore": 3234
+      "stScore": 3234,
+      "verified": false
     },
     {
       "id": "r5-7600x",
@@ -297,7 +329,8 @@ window.PC_DATA = {
         16467,
         38072
       ],
-      "stScore": 4131
+      "stScore": 4131,
+      "verified": false
     },
     {
       "id": "i5-12600k",
@@ -306,7 +339,8 @@ window.PC_DATA = {
         11616,
         34456
       ],
-      "stScore": 3919
+      "stScore": 3919,
+      "verified": false
     },
     {
       "id": "r5-7600",
@@ -315,7 +349,8 @@ window.PC_DATA = {
         11616,
         34456
       ],
-      "stScore": 3908
+      "stScore": 3908,
+      "verified": false
     },
     {
       "id": "r7-5700x",
@@ -324,7 +359,8 @@ window.PC_DATA = {
         11616,
         26890
       ],
-      "stScore": 3387
+      "stScore": 3387,
+      "verified": false
     },
     {
       "id": "i5-13400f",
@@ -333,7 +369,8 @@ window.PC_DATA = {
         11616,
         26890
       ],
-      "stScore": 3632
+      "stScore": 3632,
+      "verified": false
     },
     {
       "id": "r5-5600x",
@@ -342,7 +379,8 @@ window.PC_DATA = {
         11616,
         26890
       ],
-      "stScore": 3366
+      "stScore": 3366,
+      "verified": false
     },
     {
       "id": "r5-5600",
@@ -351,7 +389,8 @@ window.PC_DATA = {
         11616,
         22609
       ],
-      "stScore": 3255
+      "stScore": 3255,
+      "verified": false
     },
     {
       "id": "i5-12400f",
@@ -360,7 +399,8 @@ window.PC_DATA = {
         11616,
         26890
       ],
-      "stScore": 3487
+      "stScore": 3487,
+      "verified": false
     },
     {
       "id": "r5-5500",
@@ -369,7 +409,8 @@ window.PC_DATA = {
         11616,
         22609
       ],
-      "stScore": 3060
+      "stScore": 3060,
+      "verified": false
     },
     {
       "id": "i5-11400f",
@@ -378,7 +419,8 @@ window.PC_DATA = {
         8788,
         22609
       ],
-      "stScore": 2980
+      "stScore": 2980,
+      "verified": false
     },
     {
       "id": "i7-11700k",
@@ -387,7 +429,8 @@ window.PC_DATA = {
         11616,
         26890
       ],
-      "stScore": 3386
+      "stScore": 3386,
+      "verified": false
     },
     {
       "id": "r7-5800x",
@@ -396,7 +439,8 @@ window.PC_DATA = {
         11616,
         26890
       ],
-      "stScore": 3448
+      "stScore": 3448,
+      "verified": false
     },
     {
       "id": "i7-10700k",
@@ -405,7 +449,8 @@ window.PC_DATA = {
         11616,
         22609
       ],
-      "stScore": 3037
+      "stScore": 3037,
+      "verified": false
     },
     {
       "id": "r7-3800x",
@@ -414,7 +459,8 @@ window.PC_DATA = {
         8788,
         20250
       ],
-      "stScore": 2710
+      "stScore": 2710,
+      "verified": false
     },
     {
       "id": "r7-3700x",
@@ -423,7 +469,8 @@ window.PC_DATA = {
         8788,
         20250
       ],
-      "stScore": 2654
+      "stScore": 2654,
+      "verified": false
     },
     {
       "id": "i5-10400f",
@@ -432,7 +479,8 @@ window.PC_DATA = {
         8788,
         20250
       ],
-      "stScore": 2540
+      "stScore": 2540,
+      "verified": false
     },
     {
       "id": "i5-9400f",
@@ -441,7 +489,8 @@ window.PC_DATA = {
         7061,
         16724
       ],
-      "stScore": 2422
+      "stScore": 2422,
+      "verified": false
     },
     {
       "id": "i7-8700k",
@@ -450,7 +499,8 @@ window.PC_DATA = {
         8788,
         20250
       ],
-      "stScore": 2715
+      "stScore": 2715,
+      "verified": false
     },
     {
       "id": "i7-7700k",
@@ -459,7 +509,8 @@ window.PC_DATA = {
         8788,
         20250
       ],
-      "stScore": 2702
+      "stScore": 2702,
+      "verified": false
     },
     {
       "id": "i7-6700k",
@@ -468,7 +519,8 @@ window.PC_DATA = {
         7061,
         16724
       ],
-      "stScore": 2497
+      "stScore": 2497,
+      "verified": false
     },
     {
       "id": "i5-6600k",
@@ -477,7 +529,8 @@ window.PC_DATA = {
         7061,
         16724
       ],
-      "stScore": 2315
+      "stScore": 2315,
+      "verified": false
     },
     {
       "id": "i3-14100",
@@ -486,16 +539,18 @@ window.PC_DATA = {
         11616,
         34456
       ],
-      "stScore": 3762
+      "stScore": 3762,
+      "verified": false
     },
     {
       "id": "i3-12100",
       "name": "Intel Core i3-12100",
       "gpuRange": [
         11616,
-        22609
+        20760
       ],
-      "stScore": 3230
+      "stScore": 3230,
+      "verified": true
     },
     {
       "id": "i3-10100",
@@ -504,7 +559,8 @@ window.PC_DATA = {
         8788,
         20250
       ],
-      "stScore": 2589
+      "stScore": 2589,
+      "verified": false
     },
     {
       "id": "r3-3100",
@@ -513,7 +569,8 @@ window.PC_DATA = {
         7061,
         16724
       ],
-      "stScore": 2411
+      "stScore": 2411,
+      "verified": false
     },
     {
       "id": "r5-1600",
@@ -522,7 +579,8 @@ window.PC_DATA = {
         7061,
         12676
       ],
-      "stScore": 2065
+      "stScore": 2065,
+      "verified": false
     },
     {
       "id": "r5-2600",
@@ -531,7 +589,8 @@ window.PC_DATA = {
         7061,
         15057
       ],
-      "stScore": 2235
+      "stScore": 2235,
+      "verified": false
     },
     {
       "id": "r5-3600",
@@ -540,7 +599,8 @@ window.PC_DATA = {
         8788,
         20250
       ],
-      "stScore": 2559
+      "stScore": 2559,
+      "verified": false
     },
     {
       "id": "fx-9590",
@@ -549,7 +609,8 @@ window.PC_DATA = {
         3291,
         10040
       ],
-      "stScore": 1806
+      "stScore": 1806,
+      "verified": false
     },
     {
       "id": "fx-8350",
@@ -558,7 +619,8 @@ window.PC_DATA = {
         3291,
         10040
       ],
-      "stScore": 1580
+      "stScore": 1580,
+      "verified": false
     },
     {
       "id": "r7-2700x",
@@ -567,7 +629,8 @@ window.PC_DATA = {
         7061,
         16724
       ],
-      "stScore": 2415
+      "stScore": 2415,
+      "verified": false
     },
     {
       "id": "r7-1700x",
@@ -576,7 +639,8 @@ window.PC_DATA = {
         7061,
         15057
       ],
-      "stScore": 2100
+      "stScore": 2100,
+      "verified": false
     },
     {
       "id": "tr-3960x",
@@ -585,7 +649,8 @@ window.PC_DATA = {
         8788,
         20250
       ],
-      "stScore": 2683
+      "stScore": 2683,
+      "verified": false
     },
     {
       "id": "tr-2990wx",
@@ -594,7 +659,8 @@ window.PC_DATA = {
         7061,
         15057
       ],
-      "stScore": 2277
+      "stScore": 2277,
+      "verified": false
     },
     {
       "id": "i9-9980xe",
@@ -603,7 +669,8 @@ window.PC_DATA = {
         8788,
         20250
       ],
-      "stScore": 2554
+      "stScore": 2554,
+      "verified": false
     },
     {
       "id": "i9-7980xe",
@@ -612,7 +679,8 @@ window.PC_DATA = {
         7061,
         16724
       ],
-      "stScore": 2434
+      "stScore": 2434,
+      "verified": false
     },
     {
       "id": "i7-6950x",
@@ -621,7 +689,8 @@ window.PC_DATA = {
         7061,
         16724
       ],
-      "stScore": 2332
+      "stScore": 2332,
+      "verified": false
     }
   ],
   "gpus": [
