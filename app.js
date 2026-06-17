@@ -1,9 +1,16 @@
 const board = document.getElementById('board');
 const cpuTrack = document.getElementById('cpu-track');
 const gpuTrack = document.getElementById('gpu-track');
+const filterCpuEl = document.getElementById('filter-cpu');
+const filterGpuEl = document.getElementById('filter-gpu');
 
 let cpus = [];
 let gpus = [];
+let kings = { cpus: new Set(), gpus: new Set() };
+let filterCpus = false;
+let filterGpus = false;
+
+const STORAGE_KEY = 'pcBuilder.kings';
 
 function getScore(item) {
   return item.stScore !== undefined ? item.stScore : item.score;
@@ -19,8 +26,61 @@ function inRange(value, range) {
   return value >= min && value <= max;
 }
 
+function isKing(item, side) {
+  return side === 'cpu' ? kings.cpus.has(item.id) : kings.gpus.has(item.id);
+}
+
+function getKingSet(side) {
+  return side === 'cpu' ? kings.cpus : kings.gpus;
+}
+
+function loadKings(data) {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      kings.cpus = new Set(parsed.cpus || []);
+      kings.gpus = new Set(parsed.gpus || []);
+      return;
+    }
+  } catch (e) {
+    console.warn('Не удалось прочитать localStorage:', e);
+  }
+  kings.cpus = new Set(data.cpus.filter(c => c.cpuKing).map(c => c.id));
+  kings.gpus = new Set(data.gpus.filter(g => g.gpuKing).map(g => g.id));
+  saveKings();
+}
+
+function saveKings() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({
+      cpus: [...kings.cpus],
+      gpus: [...kings.gpus],
+    }));
+  } catch (e) {
+    console.warn('Не удалось записать в localStorage:', e);
+  }
+}
+
+function getVisibleCpus() {
+  return filterCpus ? cpus.filter(c => isKing(c, 'cpu')) : cpus;
+}
+
+function getVisibleGpus() {
+  return filterGpus ? gpus.filter(g => isKing(g, 'gpu')) : gpus;
+}
+
 function renderTrack(container, items, side) {
   container.innerHTML = '';
+  if (items.length === 0) {
+    const li = document.createElement('li');
+    li.className = 'item empty';
+    li.textContent = side === 'cpu'
+      ? 'Нет отмеченных процессоров. Нажмите ♛ рядом с названием, чтобы отметить.'
+      : 'Нет отмеченных видеокарт. Нажмите ♛ рядом с названием, чтобы отметить.';
+    container.appendChild(li);
+    return;
+  }
   const maxScore = items.reduce((m, it) => Math.max(m, getScore(it)), 0);
   items.forEach((item, index) => {
     const li = document.createElement('li');
@@ -51,6 +111,23 @@ function renderTrack(container, items, side) {
       name.appendChild(check);
     }
 
+    const kingBtn = document.createElement('button');
+    kingBtn.type = 'button';
+    kingBtn.className = 'king-toggle' + (isKing(item, side) ? ' active' : '');
+    kingBtn.textContent = '\u265B';
+    kingBtn.dataset.king = isKing(item, side) ? 'true' : 'false';
+    const kingTitle = isKing(item, side)
+      ? 'Убрать из рекомендуемых'
+      : 'Отметить как рекомендуемый';
+    kingBtn.title = kingTitle;
+    kingBtn.setAttribute('aria-label', kingTitle);
+    kingBtn.setAttribute('aria-pressed', isKing(item, side) ? 'true' : 'false');
+    kingBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleKing(item.id, side);
+    });
+    name.appendChild(kingBtn);
+
     const score = document.createElement('span');
     score.className = 'score';
     score.textContent = getScore(item).toLocaleString('ru-RU');
@@ -65,6 +142,41 @@ function renderTrack(container, items, side) {
     li.addEventListener('click', () => handleSelect(item.id, side));
     container.appendChild(li);
   });
+}
+
+function toggleKing(itemId, side) {
+  const set = getKingSet(side);
+  const wasKing = set.has(itemId);
+  if (wasKing) set.delete(itemId);
+  else set.add(itemId);
+  saveKings();
+
+  const filterOn = side === 'cpu' ? filterCpus : filterGpus;
+  if (filterOn && wasKing) {
+    const container = side === 'cpu' ? cpuTrack : gpuTrack;
+    const items = side === 'cpu' ? getVisibleCpus() : getVisibleGpus();
+    renderTrack(container, items, side);
+  } else {
+    const btn = document.querySelector(
+      `.item[data-side="${side}"][data-id="${itemId}"] .king-toggle`
+    );
+    if (btn) {
+      const nowKing = !wasKing;
+      btn.classList.toggle('active', nowKing);
+      btn.dataset.king = nowKing ? 'true' : 'false';
+      const title = nowKing ? 'Убрать из рекомендуемых' : 'Отметить как рекомендуемый';
+      btn.title = title;
+      btn.setAttribute('aria-label', title);
+      btn.setAttribute('aria-pressed', nowKing ? 'true' : 'false');
+    }
+  }
+}
+
+function applyFilter(side) {
+  const container = side === 'cpu' ? cpuTrack : gpuTrack;
+  const items = side === 'cpu' ? getVisibleCpus() : getVisibleGpus();
+  clearMatches();
+  renderTrack(container, items, side);
 }
 
 function clearMatches() {
@@ -190,9 +302,18 @@ async function init() {
     }
     cpus = [...data.cpus].sort(sortByScoreDesc);
     gpus = [...data.gpus].sort(sortByScoreDesc);
+    loadKings(data);
     renderTrack(cpuTrack, cpus, 'cpu');
     renderTrack(gpuTrack, gpus, 'gpu');
     connectionsSvg = createConnectionsLayer();
+    filterCpuEl.addEventListener('change', (e) => {
+      filterCpus = e.target.checked;
+      applyFilter('cpu');
+    });
+    filterGpuEl.addEventListener('change', (e) => {
+      filterGpus = e.target.checked;
+      applyFilter('gpu');
+    });
     window.addEventListener('scroll', scheduleDrawConnections, { passive: true });
     window.addEventListener('resize', scheduleDrawConnections);
   } catch (err) {

@@ -10,7 +10,8 @@ window.PC_DATA = {
         38951
       ],
       "stScore": 4741,
-      "verified": false
+      "verified": false,
+      "cpuKing": true
     },
     {
       "id": "u9-285k",
@@ -20,7 +21,8 @@ window.PC_DATA = {
         38951
       ],
       "stScore": 5087,
-      "verified": false
+      "verified": false,
+      "cpuKing": true
     },
     {
       "id": "r9-9950x",
@@ -30,7 +32,8 @@ window.PC_DATA = {
         38951
       ],
       "stScore": 4729,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r9-7950x3d",
@@ -40,7 +43,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4146,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r9-7950x",
@@ -50,7 +54,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4253,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "u7-265k",
@@ -60,7 +65,8 @@ window.PC_DATA = {
         38951
       ],
       "stScore": 4929,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i9-14900ks",
@@ -70,7 +76,8 @@ window.PC_DATA = {
         38951
       ],
       "stScore": 4813,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i9-14900k",
@@ -80,7 +87,8 @@ window.PC_DATA = {
         38951
       ],
       "stScore": 4690,
-      "verified": false
+      "verified": false,
+      "cpuKing": true
     },
     {
       "id": "i9-13900ks",
@@ -90,7 +98,8 @@ window.PC_DATA = {
         38951
       ],
       "stScore": 4716,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i9-13900k",
@@ -100,7 +109,8 @@ window.PC_DATA = {
         38951
       ],
       "stScore": 4598,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r9-9900x",
@@ -110,7 +120,8 @@ window.PC_DATA = {
         38951
       ],
       "stScore": 4677,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i7-14700k",
@@ -120,7 +131,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4457,
-      "verified": false
+      "verified": false,
+      "cpuKing": true
     },
     {
       "id": "r9-7900x",
@@ -130,7 +142,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4228,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i7-13700k",
@@ -140,7 +153,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4328,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r9-5950x",
@@ -150,7 +164,8 @@ window.PC_DATA = {
         26890
       ],
       "stScore": 3476,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i9-14900hx",
@@ -160,7 +175,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4185,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i9-12900ks",
@@ -170,7 +186,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4323,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i9-12900k",
@@ -180,7 +197,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4128,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r7-9800x3d",
@@ -190,7 +208,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4425,
-      "verified": false
+      "verified": false,
+      "cpuKing": true
     },
     {
       "id": "r9-5900x",
@@ -200,7 +219,8 @@ window.PC_DATA = {
         26890
       ],
       "stScore": 3465,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r7-9700x",
@@ -210,7 +230,8 @@ window.PC_DATA = {
         38951
       ],
       "stScore": 4647,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i5-14600k",
@@ -220,7 +241,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4268,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i5-13600k",
@@ -230,7 +252,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4115,
-      "verified": false
+      "verified": false,
+      "cpuKing": true
     },
     {
       "id": "r7-7700x",
@@ -240,7 +263,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4178,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r7-7800x3d",
@@ -250,7 +274,8 @@ window.PC_DATA = {
         34456
       ],
       "stScore": 3760,
-      "verified": false
+      "verified": false,
+      "cpuKing": true
     },
     {
       "id": "i7-12700k",
@@ -260,7 +285,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4004,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r7-7700",
@@ -270,7 +296,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4053,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r9-3900x",
@@ -280,7 +307,8 @@ window.PC_DATA = {
         20250
       ],
       "stScore": 2703,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r5-9600x",
@@ -290,7 +318,8 @@ window.PC_DATA = {
         38951
       ],
       "stScore": 4571,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i5-14400f",
@@ -300,7 +329,8 @@ window.PC_DATA = {
         34456
       ],
       "stScore": 3703,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r7-5700x3d",
@@ -310,7 +340,8 @@ window.PC_DATA = {
         22609
       ],
       "stScore": 2968,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r7-5800x3d",
@@ -320,7 +351,8 @@ window.PC_DATA = {
         22609
       ],
       "stScore": 3234,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r5-7600x",
@@ -330,7 +362,8 @@ window.PC_DATA = {
         38072
       ],
       "stScore": 4131,
-      "verified": false
+      "verified": false,
+      "cpuKing": true
     },
     {
       "id": "i5-12600k",
@@ -340,7 +373,8 @@ window.PC_DATA = {
         34456
       ],
       "stScore": 3919,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r5-7600",
@@ -350,7 +384,8 @@ window.PC_DATA = {
         34456
       ],
       "stScore": 3908,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r7-5700x",
@@ -360,7 +395,8 @@ window.PC_DATA = {
         26890
       ],
       "stScore": 3387,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i5-13400f",
@@ -370,7 +406,8 @@ window.PC_DATA = {
         26890
       ],
       "stScore": 3632,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r5-5600x",
@@ -380,7 +417,8 @@ window.PC_DATA = {
         26890
       ],
       "stScore": 3366,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r5-5600",
@@ -390,7 +428,8 @@ window.PC_DATA = {
         22609
       ],
       "stScore": 3255,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i5-12400f",
@@ -400,7 +439,8 @@ window.PC_DATA = {
         26890
       ],
       "stScore": 3487,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r5-5500",
@@ -410,7 +450,8 @@ window.PC_DATA = {
         22609
       ],
       "stScore": 3060,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i5-11400f",
@@ -420,7 +461,8 @@ window.PC_DATA = {
         22609
       ],
       "stScore": 2980,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i7-11700k",
@@ -430,7 +472,8 @@ window.PC_DATA = {
         26890
       ],
       "stScore": 3386,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r7-5800x",
@@ -440,7 +483,8 @@ window.PC_DATA = {
         26890
       ],
       "stScore": 3448,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i7-10700k",
@@ -450,7 +494,8 @@ window.PC_DATA = {
         22609
       ],
       "stScore": 3037,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r7-3800x",
@@ -460,7 +505,8 @@ window.PC_DATA = {
         20250
       ],
       "stScore": 2710,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r7-3700x",
@@ -470,7 +516,8 @@ window.PC_DATA = {
         20250
       ],
       "stScore": 2654,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i5-10400f",
@@ -480,7 +527,8 @@ window.PC_DATA = {
         20250
       ],
       "stScore": 2540,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i5-9400f",
@@ -490,7 +538,8 @@ window.PC_DATA = {
         16724
       ],
       "stScore": 2422,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i7-8700k",
@@ -500,7 +549,8 @@ window.PC_DATA = {
         20250
       ],
       "stScore": 2715,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i7-7700k",
@@ -510,7 +560,8 @@ window.PC_DATA = {
         20250
       ],
       "stScore": 2702,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i7-6700k",
@@ -520,7 +571,8 @@ window.PC_DATA = {
         16724
       ],
       "stScore": 2497,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i5-6600k",
@@ -530,7 +582,8 @@ window.PC_DATA = {
         16724
       ],
       "stScore": 2315,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i3-14100",
@@ -540,7 +593,8 @@ window.PC_DATA = {
         34456
       ],
       "stScore": 3762,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i3-12100",
@@ -550,7 +604,8 @@ window.PC_DATA = {
         20760
       ],
       "stScore": 3230,
-      "verified": true
+      "verified": true,
+      "cpuKing": false
     },
     {
       "id": "i3-10100",
@@ -560,7 +615,8 @@ window.PC_DATA = {
         20250
       ],
       "stScore": 2589,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r3-3100",
@@ -570,7 +626,8 @@ window.PC_DATA = {
         16724
       ],
       "stScore": 2411,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r5-1600",
@@ -580,7 +637,8 @@ window.PC_DATA = {
         12676
       ],
       "stScore": 2065,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r5-2600",
@@ -590,7 +648,8 @@ window.PC_DATA = {
         15057
       ],
       "stScore": 2235,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r5-3600",
@@ -600,7 +659,8 @@ window.PC_DATA = {
         20250
       ],
       "stScore": 2559,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "fx-9590",
@@ -610,7 +670,8 @@ window.PC_DATA = {
         10040
       ],
       "stScore": 1806,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "fx-8350",
@@ -620,7 +681,8 @@ window.PC_DATA = {
         10040
       ],
       "stScore": 1580,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r7-2700x",
@@ -630,7 +692,8 @@ window.PC_DATA = {
         16724
       ],
       "stScore": 2415,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "r7-1700x",
@@ -640,7 +703,8 @@ window.PC_DATA = {
         15057
       ],
       "stScore": 2100,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "tr-3960x",
@@ -650,7 +714,8 @@ window.PC_DATA = {
         20250
       ],
       "stScore": 2683,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "tr-2990wx",
@@ -660,7 +725,8 @@ window.PC_DATA = {
         15057
       ],
       "stScore": 2277,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i9-9980xe",
@@ -670,7 +736,8 @@ window.PC_DATA = {
         20250
       ],
       "stScore": 2554,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i9-7980xe",
@@ -680,7 +747,8 @@ window.PC_DATA = {
         16724
       ],
       "stScore": 2434,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     },
     {
       "id": "i7-6950x",
@@ -690,504 +758,604 @@ window.PC_DATA = {
         16724
       ],
       "stScore": 2332,
-      "verified": false
+      "verified": false,
+      "cpuKing": false
     }
   ],
   "gpus": [
     {
       "id": "rtx-5090",
       "name": "NVIDIA GeForce RTX 5090",
-      "score": 38951
+      "score": 38951,
+      "gpuKing": true
     },
     {
       "id": "rtx-5080",
       "name": "NVIDIA GeForce RTX 5080",
-      "score": 35689
+      "score": 35689,
+      "gpuKing": true
     },
     {
       "id": "rtx-5070ti",
       "name": "NVIDIA GeForce RTX 5070 Ti",
-      "score": 32396
+      "score": 32396,
+      "gpuKing": true
     },
     {
       "id": "rtx-5070",
       "name": "NVIDIA GeForce RTX 5070",
-      "score": 28720
+      "score": 28720,
+      "gpuKing": true
     },
     {
       "id": "rtx-5060ti",
       "name": "NVIDIA GeForce RTX 5060 Ti 16GB",
-      "score": 22635
+      "score": 22635,
+      "gpuKing": false
     },
     {
       "id": "rtx-5060",
       "name": "NVIDIA GeForce RTX 5060",
-      "score": 20752
+      "score": 20752,
+      "gpuKing": false
     },
     {
       "id": "rtx-5050",
       "name": "NVIDIA GeForce RTX 5050",
-      "score": 17065
+      "score": 17065,
+      "gpuKing": false
     },
     {
       "id": "rtx-4090",
       "name": "NVIDIA GeForce RTX 4090",
-      "score": 38072
+      "score": 38072,
+      "gpuKing": true
     },
     {
       "id": "rtx-4080s",
       "name": "NVIDIA GeForce RTX 4080 SUPER",
-      "score": 34258
+      "score": 34258,
+      "gpuKing": true
     },
     {
       "id": "rtx-4080",
       "name": "NVIDIA GeForce RTX 4080",
-      "score": 34456
+      "score": 34456,
+      "gpuKing": false
     },
     {
       "id": "rtx-4070tis",
       "name": "NVIDIA GeForce RTX 4070 Ti SUPER",
-      "score": 31840
+      "score": 31840,
+      "gpuKing": true
     },
     {
       "id": "rtx-4070ti",
       "name": "NVIDIA GeForce RTX 4070 Ti",
-      "score": 31566
+      "score": 31566,
+      "gpuKing": false
     },
     {
       "id": "rtx-4070s",
       "name": "NVIDIA GeForce RTX 4070 SUPER",
-      "score": 29948
+      "score": 29948,
+      "gpuKing": true
     },
     {
       "id": "rtx-4070",
       "name": "NVIDIA GeForce RTX 4070",
-      "score": 26890
+      "score": 26890,
+      "gpuKing": false
     },
     {
       "id": "rtx-4060ti",
       "name": "NVIDIA GeForce RTX 4060 Ti 8GB",
-      "score": 22609
+      "score": 22609,
+      "gpuKing": false
     },
     {
       "id": "rtx-4060",
       "name": "NVIDIA GeForce RTX 4060",
-      "score": 19501
+      "score": 19501,
+      "gpuKing": false
     },
     {
       "id": "rtx-3090ti",
       "name": "NVIDIA GeForce RTX 3090 Ti",
-      "score": 29281
+      "score": 29281,
+      "gpuKing": false
     },
     {
       "id": "rtx-3090",
       "name": "NVIDIA GeForce RTX 3090",
-      "score": 26532
+      "score": 26532,
+      "gpuKing": false
     },
     {
       "id": "rtx-3080ti",
       "name": "NVIDIA GeForce RTX 3080 Ti",
-      "score": 26758
+      "score": 26758,
+      "gpuKing": false
     },
     {
       "id": "rtx-3080-12",
       "name": "NVIDIA GeForce RTX 3080 12GB",
-      "score": 26562
+      "score": 26562,
+      "gpuKing": false
     },
     {
       "id": "rtx-3080",
       "name": "NVIDIA GeForce RTX 3080",
-      "score": 25003
+      "score": 25003,
+      "gpuKing": false
     },
     {
       "id": "rtx-3070ti",
       "name": "NVIDIA GeForce RTX 3070 Ti",
-      "score": 23217
+      "score": 23217,
+      "gpuKing": false
     },
     {
       "id": "rtx-3070",
       "name": "NVIDIA GeForce RTX 3070",
-      "score": 22108
+      "score": 22108,
+      "gpuKing": false
     },
     {
       "id": "rtx-3060ti",
       "name": "NVIDIA GeForce RTX 3060 Ti",
-      "score": 20250
+      "score": 20250,
+      "gpuKing": false
     },
     {
       "id": "rtx-3060-12",
       "name": "NVIDIA GeForce RTX 3060 12GB",
-      "score": 16724
+      "score": 16724,
+      "gpuKing": false
     },
     {
       "id": "rtx-3060-8",
       "name": "NVIDIA GeForce RTX 3060 8GB",
-      "score": 15231
+      "score": 15231,
+      "gpuKing": false
     },
     {
       "id": "rtx-3050-8",
       "name": "NVIDIA GeForce RTX 3050 8GB",
-      "score": 12491
+      "score": 12491,
+      "gpuKing": false
     },
     {
       "id": "rtx-2080ti",
       "name": "NVIDIA GeForce RTX 2080 Ti",
-      "score": 21453
+      "score": 21453,
+      "gpuKing": false
     },
     {
       "id": "rtx-2080s",
       "name": "NVIDIA GeForce RTX 2080 SUPER",
-      "score": 19440
+      "score": 19440,
+      "gpuKing": false
     },
     {
       "id": "rtx-2080",
       "name": "NVIDIA GeForce RTX 2080",
-      "score": 18584
+      "score": 18584,
+      "gpuKing": false
     },
     {
       "id": "rtx-2070s",
       "name": "NVIDIA GeForce RTX 2070 SUPER",
-      "score": 18134
+      "score": 18134,
+      "gpuKing": false
     },
     {
       "id": "rtx-2070",
       "name": "NVIDIA GeForce RTX 2070",
-      "score": 16063
+      "score": 16063,
+      "gpuKing": false
     },
     {
       "id": "rtx-2060s",
       "name": "NVIDIA GeForce RTX 2060 SUPER",
-      "score": 16467
+      "score": 16467,
+      "gpuKing": false
     },
     {
       "id": "rtx-2060-12",
       "name": "NVIDIA GeForce RTX 2060 12GB",
-      "score": 15926
+      "score": 15926,
+      "gpuKing": false
     },
     {
       "id": "rtx-2060",
       "name": "NVIDIA GeForce RTX 2060",
-      "score": 14093
+      "score": 14093,
+      "gpuKing": false
     },
     {
       "id": "gtx-1660ti",
       "name": "NVIDIA GeForce GTX 1660 Ti",
-      "score": 12615
+      "score": 12615,
+      "gpuKing": false
     },
     {
       "id": "gtx-1660s",
       "name": "NVIDIA GeForce GTX 1660 SUPER",
-      "score": 12676
+      "score": 12676,
+      "gpuKing": false
     },
     {
       "id": "gtx-1660",
       "name": "NVIDIA GeForce GTX 1660",
-      "score": 11616
+      "score": 11616,
+      "gpuKing": false
     },
     {
       "id": "gtx-1650s",
       "name": "NVIDIA GeForce GTX 1650 SUPER",
-      "score": 10191
+      "score": 10191,
+      "gpuKing": false
     },
     {
       "id": "gtx-1650",
       "name": "NVIDIA GeForce GTX 1650",
-      "score": 7872
+      "score": 7872,
+      "gpuKing": false
     },
     {
       "id": "gtx-1630",
       "name": "NVIDIA GeForce GTX 1630",
-      "score": 4985
+      "score": 4985,
+      "gpuKing": false
     },
     {
       "id": "gtx-1080ti",
       "name": "NVIDIA GeForce GTX 1080 Ti",
-      "score": 18594
+      "score": 18594,
+      "gpuKing": false
     },
     {
       "id": "gtx-1080",
       "name": "NVIDIA GeForce GTX 1080",
-      "score": 15605
+      "score": 15605,
+      "gpuKing": false
     },
     {
       "id": "gtx-1070ti",
       "name": "NVIDIA GeForce GTX 1070 Ti",
-      "score": 14672
+      "score": 14672,
+      "gpuKing": false
     },
     {
       "id": "gtx-1070",
       "name": "NVIDIA GeForce GTX 1070",
-      "score": 13514
+      "score": 13514,
+      "gpuKing": false
     },
     {
       "id": "gtx-1060",
       "name": "NVIDIA GeForce GTX 1060 6GB",
-      "score": 10040
+      "score": 10040,
+      "gpuKing": false
     },
     {
       "id": "gtx-1050ti",
       "name": "NVIDIA GeForce GTX 1050 Ti",
-      "score": 6363
+      "score": 6363,
+      "gpuKing": false
     },
     {
       "id": "gtx-1050",
       "name": "NVIDIA GeForce GTX 1050",
-      "score": 5048
+      "score": 5048,
+      "gpuKing": false
     },
     {
       "id": "gtx-980ti",
       "name": "NVIDIA GeForce GTX 980 Ti",
-      "score": 13631
+      "score": 13631,
+      "gpuKing": false
     },
     {
       "id": "gtx-980",
       "name": "NVIDIA GeForce GTX 980",
-      "score": 11080
+      "score": 11080,
+      "gpuKing": false
     },
     {
       "id": "gtx-970",
       "name": "NVIDIA GeForce GTX 970",
-      "score": 9638
+      "score": 9638,
+      "gpuKing": false
     },
     {
       "id": "gtx-960",
       "name": "NVIDIA GeForce GTX 960",
-      "score": 6143
+      "score": 6143,
+      "gpuKing": false
     },
     {
       "id": "gtx-950",
       "name": "NVIDIA GeForce GTX 950",
-      "score": 5352
+      "score": 5352,
+      "gpuKing": false
     },
     {
       "id": "gtx-780ti",
       "name": "NVIDIA GeForce GTX 780 Ti",
-      "score": 9451
+      "score": 9451,
+      "gpuKing": false
     },
     {
       "id": "gtx-780",
       "name": "NVIDIA GeForce GTX 780",
-      "score": 7961
+      "score": 7961,
+      "gpuKing": false
     },
     {
       "id": "gtx-770",
       "name": "NVIDIA GeForce GTX 770",
-      "score": 5960
+      "score": 5960,
+      "gpuKing": false
     },
     {
       "id": "gtx-760",
       "name": "NVIDIA GeForce GTX 760",
-      "score": 4825
+      "score": 4825,
+      "gpuKing": false
     },
     {
       "id": "gtx-750ti",
       "name": "NVIDIA GeForce GTX 750 Ti",
-      "score": 3899
+      "score": 3899,
+      "gpuKing": false
     },
     {
       "id": "gtx-750",
       "name": "NVIDIA GeForce GTX 750",
-      "score": 3291
+      "score": 3291,
+      "gpuKing": false
     },
     {
       "id": "gtx-680",
       "name": "NVIDIA GeForce GTX 680",
-      "score": 5604
+      "score": 5604,
+      "gpuKing": false
     },
     {
       "id": "gtx-670",
       "name": "NVIDIA GeForce GTX 670",
-      "score": 5370
+      "score": 5370,
+      "gpuKing": false
     },
     {
       "id": "gtx-660ti",
       "name": "NVIDIA GeForce GTX 660 Ti",
-      "score": 4414
+      "score": 4414,
+      "gpuKing": false
     },
     {
       "id": "gtx-580",
       "name": "NVIDIA GeForce GTX 580",
-      "score": 4629
+      "score": 4629,
+      "gpuKing": false
     },
     {
       "id": "rx-7900xtx",
       "name": "AMD Radeon RX 7900 XTX",
-      "score": 31425
+      "score": 31425,
+      "gpuKing": true
     },
     {
       "id": "rx-7900xt",
       "name": "AMD Radeon RX 7900 XT",
-      "score": 29043
+      "score": 29043,
+      "gpuKing": true
     },
     {
       "id": "rx-7900gre",
       "name": "AMD Radeon RX 7900 GRE",
-      "score": 27424
+      "score": 27424,
+      "gpuKing": false
     },
     {
       "id": "rx-7800xt",
       "name": "AMD Radeon RX 7800 XT",
-      "score": 24384
+      "score": 24384,
+      "gpuKing": false
     },
     {
       "id": "rx-7700xt",
       "name": "AMD Radeon RX 7700 XT",
-      "score": 22700
+      "score": 22700,
+      "gpuKing": false
     },
     {
       "id": "rx-7600xt",
       "name": "AMD Radeon RX 7600 XT",
-      "score": 17308
+      "score": 17308,
+      "gpuKing": false
     },
     {
       "id": "rx-7600",
       "name": "AMD Radeon RX 7600",
-      "score": 16479
+      "score": 16479,
+      "gpuKing": false
     },
     {
       "id": "rx-6950xt",
       "name": "AMD Radeon RX 6950 XT",
-      "score": 28082
+      "score": 28082,
+      "gpuKing": false
     },
     {
       "id": "rx-6900xt",
       "name": "AMD Radeon RX 6900 XT",
-      "score": 26685
+      "score": 26685,
+      "gpuKing": false
     },
     {
       "id": "rx-6800xt",
       "name": "AMD Radeon RX 6800 XT",
-      "score": 25054
+      "score": 25054,
+      "gpuKing": false
     },
     {
       "id": "rx-6800",
       "name": "AMD Radeon RX 6800",
-      "score": 22048
+      "score": 22048,
+      "gpuKing": false
     },
     {
       "id": "rx-6700xt",
       "name": "AMD Radeon RX 6700 XT",
-      "score": 19730
+      "score": 19730,
+      "gpuKing": false
     },
     {
       "id": "rx-6600xt",
       "name": "AMD Radeon RX 6600 XT",
-      "score": 16446
+      "score": 16446,
+      "gpuKing": false
     },
     {
       "id": "rx-6600",
       "name": "AMD Radeon RX 6600",
-      "score": 15057
+      "score": 15057,
+      "gpuKing": false
     },
     {
       "id": "rx-6500xt",
       "name": "AMD Radeon RX 6500 XT",
-      "score": 9624
+      "score": 9624,
+      "gpuKing": false
     },
     {
       "id": "rx-6400",
       "name": "AMD Radeon RX 6400",
-      "score": 7741
+      "score": 7741,
+      "gpuKing": false
     },
     {
       "id": "rx-5700xt",
       "name": "AMD Radeon RX 5700 XT",
-      "score": 16063
+      "score": 16063,
+      "gpuKing": false
     },
     {
       "id": "rx-5700",
       "name": "AMD Radeon RX 5700",
-      "score": 14225
+      "score": 14225,
+      "gpuKing": false
     },
     {
       "id": "rx-5600xt",
       "name": "AMD Radeon RX 5600 XT",
-      "score": 13397
+      "score": 13397,
+      "gpuKing": false
     },
     {
       "id": "rx-5500xt",
       "name": "AMD Radeon RX 5500 XT 8GB",
-      "score": 9065
+      "score": 9065,
+      "gpuKing": false
     },
     {
       "id": "rx-590",
       "name": "AMD Radeon RX 590",
-      "score": 9289
+      "score": 9289,
+      "gpuKing": false
     },
     {
       "id": "rx-580",
       "name": "AMD Radeon RX 580 8GB",
-      "score": 8788
+      "score": 8788,
+      "gpuKing": false
     },
     {
       "id": "rx-570",
       "name": "AMD Radeon RX 570 4GB",
-      "score": 7000
+      "score": 7000,
+      "gpuKing": false
     },
     {
       "id": "rx-480",
       "name": "AMD Radeon RX 480 8GB",
-      "score": 8529
+      "score": 8529,
+      "gpuKing": false
     },
     {
       "id": "rx-470",
       "name": "AMD Radeon RX 470 4GB",
-      "score": 7917
+      "score": 7917,
+      "gpuKing": false
     },
     {
       "id": "vega-64",
       "name": "AMD Radeon RX Vega 64",
-      "score": 13873
+      "score": 13873,
+      "gpuKing": false
     },
     {
       "id": "vega-56",
       "name": "AMD Radeon RX Vega 56",
-      "score": 12968
+      "score": 12968,
+      "gpuKing": false
     },
     {
       "id": "r9-furyx",
       "name": "AMD Radeon R9 Fury X",
-      "score": 9391
+      "score": 9391,
+      "gpuKing": false
     },
     {
       "id": "r9-390x",
       "name": "AMD Radeon R9 390X",
-      "score": 9201
+      "score": 9201,
+      "gpuKing": false
     },
     {
       "id": "r9-290x",
       "name": "AMD Radeon R9 290X",
-      "score": 8436
+      "score": 8436,
+      "gpuKing": false
     },
     {
       "id": "arc-b580",
       "name": "Intel Arc B580",
-      "score": 15993
+      "score": 15993,
+      "gpuKing": false
     },
     {
       "id": "arc-b570",
       "name": "Intel Arc B570",
-      "score": 14104
+      "score": 14104,
+      "gpuKing": false
     },
     {
       "id": "arc-a770",
       "name": "Intel Arc A770",
-      "score": 13356
+      "score": 13356,
+      "gpuKing": false
     },
     {
       "id": "arc-a750",
       "name": "Intel Arc A750",
-      "score": 12627
+      "score": 12627,
+      "gpuKing": false
     },
     {
       "id": "arc-a580",
       "name": "Intel Arc A580",
-      "score": 12050
+      "score": 12050,
+      "gpuKing": false
     },
     {
       "id": "arc-a380",
       "name": "Intel Arc A380",
-      "score": 6311
+      "score": 6311,
+      "gpuKing": false
     }
   ]
 };
