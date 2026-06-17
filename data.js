@@ -1,4 +1,6 @@
-{
+// Source of truth for PC Builder data.
+// Edit this file directly, then run `make init` to validate.
+window.PC_DATA = {
   "cpus": [
     {
       "id": "r9-9950x3d",
@@ -1119,4 +1121,4 @@
       "score": 6311
     }
   ]
-}
+};

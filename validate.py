@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate PC Builder data.json.
+"""Validate PC Builder data.js.
 
 PC is for gaming, so we use **PassMark Single Thread** as the ordering
 metric (gaming is largely single-thread-bound). GPU compatibility ceilings
@@ -13,18 +13,35 @@ Checks:
 5. Monotonicity: for any two CPUs A and B with stScore_A <= stScore_B,
    gpuRange_B[1] >= gpuRange_A[1] AND gpuRange_B[0] >= gpuRange_A[0].
 
-Usage: python3 validate.py [path/to/data.json]
+Reads the `window.PC_DATA = { ... };` assignment from data.js.
+Tolerates JS-only conveniences that JSON forbids: `//` line comments and
+trailing commas in objects/arrays. Strings must still be double-quoted.
+
+Usage: python3 validate.py [path/to/data.js]
 """
 import json
+import re
 import sys
 from pathlib import Path
 
-PATH = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).parent / "data.json"
+PATH = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).parent / "data.js"
+
+
+def load_pc_data(path: Path) -> dict:
+    text = path.read_text(encoding="utf-8")
+    match = re.search(
+        r"window\.PC_DATA\s*=\s*(\{.*\})\s*;?\s*$", text, re.DOTALL
+    )
+    if not match:
+        sys.exit(f"ERROR: {path} does not contain `window.PC_DATA = {{...}};`")
+    obj = match.group(1)
+    obj = re.sub(r"//[^\n]*", "", obj)
+    obj = re.sub(r",(\s*[}\]])", r"\1", obj)
+    return json.loads(obj)
 
 
 def main() -> int:
-    with PATH.open(encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_pc_data(PATH)
 
     cpus = data["cpus"]
     gpus = data["gpus"]

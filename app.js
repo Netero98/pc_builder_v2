@@ -175,8 +175,10 @@ function handleSelect(id, side) {
 
 async function init() {
   try {
-    const res = await fetch('data.json', { cache: 'no-store' });
-    const data = await res.json();
+    const data = window.PC_DATA;
+    if (!data || !data.cpus || !data.gpus) {
+      throw new Error('window.PC_DATA is missing — run `make init` to generate data.js');
+    }
     cpus = [...data.cpus].sort(sortByScoreDesc);
     gpus = [...data.gpus].sort(sortByScoreDesc);
     renderTrack(cpuTrack, cpus, 'cpu');
@@ -185,7 +187,7 @@ async function init() {
     window.addEventListener('scroll', scheduleDrawConnections, { passive: true });
     window.addEventListener('resize', scheduleDrawConnections);
   } catch (err) {
-    console.error('Не удалось загрузить data.json:', err);
+    console.error('Не удалось загрузить данные:', err);
     cpuTrack.innerHTML = '<li class="item">Не удалось загрузить данные</li>';
     gpuTrack.innerHTML = '<li class="item">Не удалось загрузить данные</li>';
   }
